@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import { IKImage } from "imagekitio-next";
 
@@ -20,6 +21,7 @@ const Image = ({ path, w, h, alt, className }: ImageType) => {
       height={h}
       alt={alt}
       className={className}
+      transformation={[{ width: `${w}`, height: `${h}` }]}
     />
   );
 };
