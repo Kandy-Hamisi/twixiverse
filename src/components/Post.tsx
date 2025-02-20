@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "@/components/Image";
+import PostInfo from "@/components/PostInfo";
 
 const Post = () => {
   return (
@@ -22,11 +23,22 @@ const Post = () => {
           />
         </div>
         {/*  Content */}
-        <div className="">
+        <div className="flex-1">
           {/*  TOP */}
-          <div className="">
-            <div className=""></div>
+          <div className="flex items-center justify-between gap-2">
+            <div className="flex items-center gap-2 flex-wrap">
+              <h1 className="text-md font-bold">Kandy Hamisi</h1>
+              <span className="text-textGray">@kandy-hamisi</span>
+              <span className="text-textGray">1 day ago</span>
+            </div>
+            <PostInfo />
           </div>
+          {/*    TEXT & MEDIA */}
+          <p className="my-2">
+            there is alot to be said so I wont say it all right now. Have a
+            wonderful day and stop being blasphemous for the entire day
+          </p>
+          <Image path="default-image.jpg" alt="" w={600} h={600} />
         </div>
       </div>
     </div>
