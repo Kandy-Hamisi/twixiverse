@@ -18,13 +18,13 @@ const HomePage = () => {
         <Link className="pb-3 flex items-center" href="/">
           Following
         </Link>
-        <Link className="pb-3 flex items-center " href="/">
+        <Link className="pb-3 hidden md:flex items-center " href="/">
           React.js
         </Link>
-        <Link className="pb-3 flex items-center " href="/">
+        <Link className="pb-3 hidden md:flex items-center " href="/">
           Golang
         </Link>
-        <Link className="pb-3 flex items-center " href="/">
+        <Link className="pb-3 hidden md:flex items-center " href="/">
           Docker
         </Link>
       </div>
