@@ -8,21 +8,28 @@ export const shareAction = async (
 ) => {
   const file = formData.get("file") as File;
   const description = formData.get("desc") as string;
-  console.log(file);
 
   const bytes = await file.arrayBuffer();
   const buffer = Buffer.from(bytes);
 
-  const transformation = `w-600, ${settings.type === "square" ? "ar-1-1" : settings.type === "wide" ? "ar-16-9" : ""}`;
+  const transformation = `w-600, ${
+    settings.type === "square"
+      ? "ar-1-1"
+      : settings.type === "wide"
+        ? "ar-16-9"
+        : ""
+  }`;
 
   imagekit.upload(
     {
       file: buffer,
       fileName: file.name,
       folder: "/twixiverse-posts",
-      transformation: {
-        pre: transformation,
-      },
+      ...(file.type.includes("image") && {
+        transformation: {
+          pre: transformation,
+        },
+      }),
       customMetadata: {
         sensitive: settings.sensitive,
       },

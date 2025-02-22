@@ -3,6 +3,7 @@ import Image from "@/components/Image";
 import PostInfo from "@/components/PostInfo";
 import PostInteractions from "@/components/PostInteractions";
 import { imagekit } from "@/lib/utils";
+import Video from "@/components/Video";
 
 interface FileDetailsResponse {
   width: number;
@@ -25,7 +26,7 @@ const Post = async () => {
     });
   };
 
-  const fileDetails = await getFileDetails("67b87ff9432c476416fcbf17");
+  const fileDetails = await getFileDetails("67ba1a84432c47641640d4ea");
   console.log(fileDetails);
 
   return (
@@ -73,14 +74,16 @@ const Post = async () => {
             there is alot to be said so I wont say it all right now. Have a
             wonderful day and stop being blasphemous for the entire day
           </p>
-          {fileDetails && (
+          {fileDetails && fileDetails.fileType ? (
             <Image
               path={fileDetails.filePath}
               alt=""
               w={fileDetails.width}
               h={fileDetails.height}
-              className={fileDetails.customMetadata?.sensitive ? "blur-lg" : ""}
+              // className={fileDetails.customMetadata?.sensitive ? "blur-lg" : ""}
             />
+          ) : (
+            <Video path={fileDetails.filePath} />
           )}
           <PostInteractions />
         </div>

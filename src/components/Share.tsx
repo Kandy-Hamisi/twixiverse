@@ -43,7 +43,7 @@ const Share = () => {
           id="file-input"
         />
         {/* PREVIEW IMAGE */}
-        {previewUrl && (
+        {media?.type.includes("image") && previewUrl && (
           <div className="relative rounded-xl overflow-hidden">
             <NextImage
               src={previewUrl}
@@ -58,6 +58,24 @@ const Share = () => {
             >
               Edit
             </div>
+            <div
+              className="cursor-pointer absolute top-2 right-2 bg-black bg-opacity-50 text-white h-8 w-8 flex items-center justify-center rounded-full text-sm font-bold"
+              onClick={() => setMedia(null)}
+            >
+              X
+            </div>
+          </div>
+        )}
+        {media?.type.includes("video") && previewUrl && (
+          <div className="relative">
+            <video src={previewUrl} controls>
+              <div
+                className="absolute top-2 left-2 bg-black bg-opacity-50 text-white h-8 w-8 flex items-center justify-center rounded-full text-sm font-bold"
+                onClick={() => setMedia(null)}
+              >
+                X
+              </div>
+            </video>
           </div>
         )}
 
@@ -77,6 +95,7 @@ const Share = () => {
               onChange={handleMediaChange}
               id="file"
               className="hidden"
+              accept="image/*, video/*"
             />
             <label htmlFor="file">
               <Image
