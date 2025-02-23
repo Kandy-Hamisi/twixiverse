@@ -3,7 +3,7 @@
 import React from "react";
 import { IKVideo } from "imagekitio-next";
 
-const urlEndpoint = process.env.NEXT_PUBLIC_URL_ENDPOINT;
+const urlEndpoint = process.env.NEXT_PUBLIC_URL_ENDPOINT!;
 
 type VideoTypes = {
   path: string;

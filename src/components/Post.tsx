@@ -27,7 +27,6 @@ const Post = async () => {
   };
 
   const fileDetails = await getFileDetails("67ba1a84432c47641640d4ea");
-  console.log(fileDetails);
 
   return (
     <div className="p-4 border-y-[1px] border-borderGray">
@@ -74,7 +73,7 @@ const Post = async () => {
             there is alot to be said so I wont say it all right now. Have a
             wonderful day and stop being blasphemous for the entire day
           </p>
-          {fileDetails && fileDetails.fileType ? (
+          {fileDetails && fileDetails.fileType === "image" ? (
             <Image
               path={fileDetails.filePath}
               alt=""

@@ -18,8 +18,6 @@ const Image = ({ path, w, h, alt, className, tr }: ImageType) => {
     <IKImage
       urlEndpoint={urlEndpoint}
       path={path}
-      width={w}
-      height={h}
       alt={alt}
       className={className}
       {...(tr
