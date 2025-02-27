@@ -26,6 +26,38 @@ const PopularTags = () => {
         <h2 className="text-textGrayLight font-bold">OpenAI</h2>
         <span className="text-textGray text-sm">20K Posts</span>
       </div>
+      <div className="">
+        <div className="flex items-center justify-between">
+          <span className="text-textGray text-sm">Technology - Trending</span>
+          <Image path="icons/infoMore.svg" alt="" h={16} w={16} />
+        </div>
+        <h2 className="text-textGrayLight font-bold">OpenAI</h2>
+        <span className="text-textGray text-sm">20K Posts</span>
+      </div>
+      <div className="">
+        <div className="flex items-center justify-between">
+          <span className="text-textGray text-sm">Technology - Trending</span>
+          <Image path="icons/infoMore.svg" alt="" h={16} w={16} />
+        </div>
+        <h2 className="text-textGrayLight font-bold">OpenAI</h2>
+        <span className="text-textGray text-sm">20K Posts</span>
+      </div>
+      <div className="">
+        <div className="flex items-center justify-between">
+          <span className="text-textGray text-sm">Technology - Trending</span>
+          <Image path="icons/infoMore.svg" alt="" h={16} w={16} />
+        </div>
+        <h2 className="text-textGrayLight font-bold">OpenAI</h2>
+        <span className="text-textGray text-sm">20K Posts</span>
+      </div>
+      <div className="">
+        <div className="flex items-center justify-between">
+          <span className="text-textGray text-sm">Technology - Trending</span>
+          <Image path="icons/infoMore.svg" alt="" h={16} w={16} />
+        </div>
+        <h2 className="text-textGrayLight font-bold">OpenAI</h2>
+        <span className="text-textGray text-sm">20K Posts</span>
+      </div>
     </div>
   );
 };
